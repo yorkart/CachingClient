@@ -7,9 +7,9 @@ namespace Enyim.Caching._Configuration {
 
     public class CacahingConfiguration {
 
-        public IList<ServerNode> ServerList { get; set; }
+        public IList<ServerNodeConfiguration> ServerList { get; set; }
 
-        public ServerNode DefaultServer { get; set; }
+        public ServerNodeConfiguration DefaultServer { get; set; }
 
 
     }

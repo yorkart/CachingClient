@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 
 namespace Enyim.Caching._Configuration {
-    public class ServerNode {
+    public class ServerNodeConfiguration {
         /// <summary>
         /// 服务器地址 ip,port格式
         /// </summary>
