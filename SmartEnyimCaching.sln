@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enyim.Caching", "Enyim.Caching\Enyim.Caching.csproj", "{D84FC60B-419E-4B02-9609-DA729FCF495E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enyim.Caching.Log4NetAdapter", "Enyim.Caching.Log4NetAdapter\Enyim.Caching.Log4NetAdapter.csproj", "{A06F4DE4-CB6C-43C0-AF1B-3704ACC86486}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp", "DemoApp\DemoApp.csproj", "{041D518C-08E6-484A-A224-84BF0DA4B5C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D84FC60B-419E-4B02-9609-DA729FCF495E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D84FC60B-419E-4B02-9609-DA729FCF495E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D84FC60B-419E-4B02-9609-DA729FCF495E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D84FC60B-419E-4B02-9609-DA729FCF495E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A06F4DE4-CB6C-43C0-AF1B-3704ACC86486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06F4DE4-CB6C-43C0-AF1B-3704ACC86486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A06F4DE4-CB6C-43C0-AF1B-3704ACC86486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A06F4DE4-CB6C-43C0-AF1B-3704ACC86486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{041D518C-08E6-484A-A224-84BF0DA4B5C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041D518C-08E6-484A-A224-84BF0DA4B5C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041D518C-08E6-484A-A224-84BF0DA4B5C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041D518C-08E6-484A-A224-84BF0DA4B5C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
