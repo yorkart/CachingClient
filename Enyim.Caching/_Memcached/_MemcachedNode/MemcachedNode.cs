@@ -6,7 +6,6 @@ using Enyim.Caching._Configuration;
 using System.Net;
 using Enyim.Caching._FailurePolicy;
 using System.Threading;
-using Enyim.Caching.Memcached;
 
 namespace Enyim.Caching._MemcachedNode {
 
@@ -45,8 +44,8 @@ namespace Enyim.Caching._MemcachedNode {
             }
         }
 
-        protected internal virtual PooledSocket CreateSocket() {
-            return new PooledSocket(
+        protected internal virtual Enyim.Caching.Memcached.PooledSocket CreateSocket() {
+            return new Enyim.Caching.Memcached.PooledSocket(
                 this.nodeAdapter.ServerAddress, 
                 this.nodeAdapter.ConnectionTimeout,
                 this.nodeAdapter.ReceiveTimeout

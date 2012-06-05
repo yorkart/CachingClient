@@ -6,7 +6,7 @@ using System.Text;
 namespace Enyim.Caching._Configuration {
     public class ServerNodeConfiguration {
         /// <summary>
-        /// 服务器地址 ip,port格式
+        /// 服务器地址 [ip,port]格式
         /// </summary>
         public string ServerAddress { get; set; }
 
@@ -21,9 +21,13 @@ namespace Enyim.Caching._Configuration {
         /// 连接超时 毫秒为单位
         /// </summary>
         public int ConnectionTimeout { get; set; }
-
+        /// <summary>
+        /// 接收超时 
+        /// </summary>
         public int ReceiveTimeout { get; set; }
-
+        /// <summary>
+        /// 节点宕机后重试时间间隔
+        /// </summary>
         public int DeadTimeout { get; set; }
 
         public int QueueTimeOut { get; set; }

@@ -52,14 +52,21 @@ namespace Enyim.Caching.Memcached {
             var mre = new ManualResetEvent(false);
 
             socket.BeginConnect(endpoint, iar => {
-                try { using (iar.AsyncWaitHandle) socket.EndConnect(iar); } catch { }
+                try {
+                    using (iar.AsyncWaitHandle) {
+                        socket.EndConnect(iar);
+                    }
+                } catch {
+                }
 
                 mre.Set();
             }, null);
 
-            if (!mre.WaitOne(timeout) || !socket.Connected)
-                using (socket)
+            if (!mre.WaitOne(timeout) || !socket.Connected) {
+                using (socket) {
                     throw new TimeoutException("Could not connect to " + endpoint);
+                }
+            }
         }
 
         public Action<PooledSocket> CleanupCallback { get; set; }
