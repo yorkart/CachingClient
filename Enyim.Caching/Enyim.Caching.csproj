@@ -149,12 +149,19 @@
     <Compile Include="UIntEqualityComparer.cs" />
     <Compile Include="_Configuration\CacahingConfiguration.cs" />
     <Compile Include="_Configuration\ServerNodeConfiguration.cs" />
+    <Compile Include="_Memcached\_ServerPool\BinaryServerPool.cs" />
+    <Compile Include="_Memcached\_ServerPool\IServerPool.cs" />
+    <Compile Include="_Memcached\MemcachedClient.cs" />
     <Compile Include="_Memcached\_FailurePolicy\INodeFailurePolicy.cs" />
     <Compile Include="_Memcached\_FailurePolicy\FailImmediatelyPolicy.cs" />
     <Compile Include="_Memcached\_MemcachedNode\IMemcachedNode.cs" />
     <Compile Include="_Memcached\_MemcachedNode\MemcachedNode.cs" />
     <Compile Include="_Memcached\_MemcachedNode\ServerNodeAdapter.cs" />
     <Compile Include="_Memcached\_MemcachedNode\ServerNodeConnectionPool.cs" />
+    <Compile Include="_Memcached\_ServerPool\TextServerPool.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="_Memcached\NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
