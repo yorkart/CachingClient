@@ -11,7 +11,7 @@ namespace Enyim.Caching._MemcachedNode {
 
     public class MemcachedNode : IMemcachedNode {
         private static readonly Enyim.Caching.ILog log = Enyim.Caching.LogManager.GetLogger(typeof(MemcachedNode));
-        private static readonly object SyncRoot = new Object();
+        private static readonly Object SyncRoot = new Object();
 
         private ServerNodeAdapter nodeAdapter; // 节点配置本地转换器
         private ServerNodeConnectionPool connectionPool; // 该节点连接池

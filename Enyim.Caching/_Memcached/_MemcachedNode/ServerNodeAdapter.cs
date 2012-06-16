@@ -25,9 +25,6 @@ namespace Enyim.Caching._MemcachedNode {
 
         public ServerNodeAdapter(ServerNodeConfiguration node) {
             this.node = node;
-            if (this.node.BeginHashKey >= this.node.EndHashKey) {
-                throw new InvalidOperationException("EndHashKey must be rather than BeginHashKey", null);
-            }
             if (this.node.MinPoolSize >= this.node.MaxPoolSize) {
                 throw new InvalidOperationException("MaxPoolSize must be rather than MinPoolSize", null);
             }
@@ -43,14 +40,6 @@ namespace Enyim.Caching._MemcachedNode {
 
         public int MaxPoolSize {
             get { return this.node.MaxPoolSize; }
-        }
-
-        public int BeginHashKey {
-            get { return this.node.BeginHashKey; }
-        }
-
-        public int EndHashKey {
-            get { return this.node.EndHashKey; }
         }
 
         public TimeSpan ConnectionTimeout {
@@ -107,14 +96,14 @@ namespace Enyim.Caching._MemcachedNode {
         }
 
         private IPEndPoint ResolveToEndPoint(string host, int port) {
-            if (String.IsNullOrEmpty(host))
+            if (String.IsNullOrEmpty(host)) {
                 throw new ArgumentNullException("host");
-
+            }
             IPAddress address;
 
-            // parse as an IP address
+            // 尝试解析地址
             if (!IPAddress.TryParse(host, out address)) {
-                // not an ip, resolve from dns
+                // 如果不是一个IP 尝试从DNS解析
                 // TODO we need to find a way to specify whihc ip should be used when the host has several
                 var entry = System.Net.Dns.GetHostEntry(host);
                 address = entry.AddressList.FirstOrDefault(ip => ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork);
