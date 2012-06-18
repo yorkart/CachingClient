@@ -9,23 +9,21 @@
 //
 //   </copyright> 
 //-----------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using Enyim.Caching._Configuration;
+
 
 namespace Enyim.Caching._Memcached {
-    using System;
-    using System.Data;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Text;
-using Enyim.Caching._Configuration;
 
     /// <summary>
     /// MemcachedClient 概要
     /// </summary>
-    public class MemcachedClient : IMemcachedClient{
+    public class MemcachedClient : IMemcachedClient {
 
-        private CacahingConfiguration configuration;
+        private MemcachedConfiguration configuration;
         private IServerPool pool;
-        public MemcachedClient(CacahingConfiguration configuration) {
+        public MemcachedClient(MemcachedConfiguration configuration) {
             this.configuration = configuration;
         }
 

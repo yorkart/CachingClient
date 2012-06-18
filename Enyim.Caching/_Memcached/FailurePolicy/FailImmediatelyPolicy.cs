@@ -10,9 +10,10 @@
 //   </copyright> 
 //-----------------------------------------------------------------------------------------
 
-namespace Enyim.Caching._FailurePolicy {
-    using System;
-    using Enyim.Caching._MemcachedNode;
+using System;
+using Enyim.Caching._MemcachedNode;
+
+namespace Enyim.Caching.FailurePolicy {
 
     /// <summary>
     /// Fails a node immediately when an error occures. This is the default policy.

@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Enyim.Caching._Memcached;
-using Enyim.Caching.Memcached;
-using Enyim.Caching.Memcached.Protocol.Binary;
+﻿using System.Collections.Generic;
 
 namespace Enyim.Caching._Configuration {
 
-    public class CacahingConfiguration {
+    public class MemcachedConfiguration {
         /// <summary>
         /// 服务节点集合
         /// </summary>
-        public IList<ServerNodeConfiguration> ServerList { get; set; }
+        public IList<MemcachedNodeConfiguration> ServerList { get; set; }
 
-        public ServerNodeConfiguration DefaultServer { get; set; }
+        //public ServerNodeConfiguration DefaultServer { get; set; }
 
+        /// <summary>
+        /// 协议
+        /// "TEXT" / "BINARY"
+        /// </summary>
         public string Protocol {get;set;} 
 
         public Enyim.Caching._Memcached.IServerPool CreateServerPool() {

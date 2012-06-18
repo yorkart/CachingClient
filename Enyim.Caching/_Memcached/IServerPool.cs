@@ -10,13 +10,11 @@
 //   </copyright> 
 //-----------------------------------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+using Enyim.Caching._MemcachedNode;
+
 namespace Enyim.Caching._Memcached {
-    using System;
-    using System.Data;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Text;
-    using Enyim.Caching._MemcachedNode;
 
     /// <summary>
     /// Provides custom server pool implementations

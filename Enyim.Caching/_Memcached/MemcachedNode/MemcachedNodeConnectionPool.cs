@@ -9,17 +9,19 @@
 //
 //   </copyright> 
 //-----------------------------------------------------------------------------------------
+using System;
+using System.Data;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading;
+using Enyim.Caching.Memcached;
+using Enyim.Collections;
+using System.Net;
+using Enyim.Caching._Memcached.Configuration;
 
-namespace Enyim.Caching._MemcachedNode {
-    using System;
-    using System.Data;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Text;
-    using System.Threading;
-    using Enyim.Caching.Memcached;
-    using Enyim.Collections;
-    using System.Net;
+namespace Enyim.Caching._MemcachedNode.ServerPool {
+
 
     /// <summary>
     /// ServerNodeConnectionPool 概要
@@ -28,14 +30,16 @@ namespace Enyim.Caching._MemcachedNode {
         private static readonly Enyim.Caching.ILog log = Enyim.Caching.LogManager.GetLogger(typeof(ServerNodeConnectionPool).FullName.Replace("+", "."));
 
         private MemcachedNode ownerNode;
+        private MemcachedNodeConfig nodeConfig;
         private InterlockedStack<PooledSocket> freeItems;
         private Semaphore semaphore;
 
         private bool isAlive;
         private bool isDisposed;
 
-        public ServerNodeConnectionPool(MemcachedNode memcachedNode) {
+        public ServerNodeConnectionPool(MemcachedNode memcachedNode, MemcachedNodeConfig nodeConfig) {
             this.ownerNode = memcachedNode;
+            this.nodeConfig = nodeConfig;
             this.semaphore = new Semaphore(this.MinItems, this.MaxItems);
             this.freeItems = new InterlockedStack<PooledSocket>();
             this.isAlive = true;// 默认为true，因为创建socket时如果失败，此标记将被回调方法标识为false
@@ -44,13 +48,13 @@ namespace Enyim.Caching._MemcachedNode {
             get { return this.isAlive; }
         }
         internal int MinItems {
-            get { return this.ownerNode.NodeAdapter.MinPoolSize; }
+            get { return this.nodeConfig.MinPoolSize; }
         }
         internal int MaxItems {
-            get { return this.ownerNode.NodeAdapter.MaxPoolSize; }
+            get { return this.nodeConfig.MaxPoolSize; }
         }
         internal EndPoint ServerAddress {
-            get { return this.ownerNode.NodeAdapter.ServerAddress; }
+            get { return this.nodeConfig.ServerAddress; }
         }
 
         private PooledSocket CreateSocket() {

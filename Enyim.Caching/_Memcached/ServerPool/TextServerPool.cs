@@ -17,16 +17,17 @@ namespace Enyim.Caching._Memcached._ServerPool {
     using System.Collections.Generic;
     using System.Text;
     using Enyim.Caching._Configuration;
+    using Enyim.Caching._Memcached._Configuration;
 
     /// <summary>
     /// TextServerPool 概要
     /// </summary>
     public class TextServerPool : IServerPool{
         // 配置文件
-        private CacahingConfiguration configuration;
+        private MemcachedConfig configuration;
 
 
-        public TextServerPool(CacahingConfiguration configuration) {
+        public TextServerPool(MemcachedConfig configuration) {
             if (configuration == null) {
                 throw new ArgumentNullException("socketConfig");
             }

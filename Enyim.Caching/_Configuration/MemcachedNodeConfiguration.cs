@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 namespace Enyim.Caching._Configuration {
-    public class ServerNodeConfiguration {
+
+    public class MemcachedNodeConfiguration {
         /// <summary>
         /// 服务器地址 [ip,port]格式
         /// </summary>
         public string ServerAddress { get; set; }
+        /// <summary>
+        /// 备份服务器地址 多个以空格隔开
+        /// [ip,port];[ip,port];[ip,port] ...
+        /// </summary>
+        public string BackupServerAddress { get; set; }
         /// <summary>
         /// 最小连接池
         /// </summary>
