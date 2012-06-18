@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using Enyim.Caching._Configuration;
 using System.Net;
 using Enyim.Caching.Memcached;
-using Enyim.Caching._Memcached._ServerPool;
+using Enyim.Caching._Memcached.ServerPool;
 
-namespace Enyim.Caching._Memcached._Configuration {
+namespace Enyim.Caching._Memcached.Configuration {
 
     public class MemcachedConfig {
 

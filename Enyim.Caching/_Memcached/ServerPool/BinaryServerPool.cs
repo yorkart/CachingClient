@@ -10,13 +10,13 @@
 //   </copyright> 
 //-----------------------------------------------------------------------------------------
 
-namespace Enyim.Caching._Memcached._ServerPool {
+namespace Enyim.Caching._Memcached.ServerPool {
     using System;
     using System.Data;
     using System.Collections;
     using System.Collections.Generic;
     using System.Text;
-    using Enyim.Caching._Memcached._Configuration;
+    using Enyim.Caching._Memcached.Configuration;
 
     /// <summary>
     /// BinaryServerPool 概要

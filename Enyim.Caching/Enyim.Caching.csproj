@@ -147,18 +147,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TigerHash.cs" />
     <Compile Include="UIntEqualityComparer.cs" />
-    <Compile Include="_Configuration\CacahingConfiguration.cs" />
-    <Compile Include="_Configuration\ServerNodeConfiguration.cs" />
-    <Compile Include="_Memcached\_ServerPool\BinaryServerPool.cs" />
-    <Compile Include="_Memcached\_ServerPool\IServerPool.cs" />
+    <Compile Include="_Configuration\MemcachedConfiguration.cs" />
+    <Compile Include="_Configuration\MemcachedNodeConfiguration.cs" />
+    <Compile Include="_Memcached\Configuration\MemcachedConfig.cs" />
+    <Compile Include="_Memcached\Configuration\MemcachedNodeConfig.cs" />
+    <Compile Include="_Memcached\ServerPool\BinaryServerPool.cs" />
+    <Compile Include="_Memcached\IServerPool.cs" />
     <Compile Include="_Memcached\MemcachedClient.cs" />
-    <Compile Include="_Memcached\_FailurePolicy\INodeFailurePolicy.cs" />
-    <Compile Include="_Memcached\_FailurePolicy\FailImmediatelyPolicy.cs" />
-    <Compile Include="_Memcached\_MemcachedNode\IMemcachedNode.cs" />
-    <Compile Include="_Memcached\_MemcachedNode\MemcachedNode.cs" />
-    <Compile Include="_Memcached\_MemcachedNode\ServerNodeAdapter.cs" />
-    <Compile Include="_Memcached\_MemcachedNode\ServerNodeConnectionPool.cs" />
-    <Compile Include="_Memcached\_ServerPool\TextServerPool.cs" />
+    <Compile Include="_Memcached\INodeFailurePolicy.cs" />
+    <Compile Include="_Memcached\FailurePolicy\FailImmediatelyPolicy.cs" />
+    <Compile Include="_Memcached\IMemcachedNode.cs" />
+    <Compile Include="_Memcached\MemcachedNode\MemcachedNode.cs" />
+    <Compile Include="_Memcached\MemcachedNode\MemcachedNodeConnectionPool.cs" />
+    <Compile Include="_Memcached\ServerPool\TextServerPool.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

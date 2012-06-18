@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using Enyim.Caching._Configuration;
 
 namespace Enyim.Caching._Memcached.Configuration {
     
