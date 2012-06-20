@@ -40,7 +40,9 @@ namespace Enyim.Caching.Memcached {
         private INodeFailurePolicy failurePolicy;
 
         protected INodeFailurePolicy FailurePolicy {
-            get { return this.failurePolicy ?? (this.failurePolicy = this.config.FailurePolicyFactory.Create(this)); }
+            get {
+                return null;// this.failurePolicy ?? (this.failurePolicy = this.config.FailurePolicyFactory.Create(this)); 
+            }
         }
 
         /// <summary>

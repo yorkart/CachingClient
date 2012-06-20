@@ -12,6 +12,7 @@
 using System;
 using System.Collections.Generic;
 using Enyim.Caching._Configuration;
+using Enyim.Caching.Memcached;
 
 
 namespace Enyim.Caching._Memcached {

@@ -151,15 +151,16 @@
     <Compile Include="_Configuration\MemcachedNodeConfiguration.cs" />
     <Compile Include="_Memcached\Configuration\MemcachedConfig.cs" />
     <Compile Include="_Memcached\Configuration\MemcachedNodeConfig.cs" />
-    <Compile Include="_Memcached\ServerPool\BinaryServerPool.cs" />
+    <Compile Include="_Memcached\Configuration\ConfigurationProvider.cs" />
+    <Compile Include="_Memcached\IMemcachedClientConfig.cs" />
+    <Compile Include="_Memcached\IMemcachedNodeLocator.cs" />
+    <Compile Include="_Memcached\INodeFailurePolicy.cs" />
     <Compile Include="_Memcached\IServerPool.cs" />
     <Compile Include="_Memcached\MemcachedClient.cs" />
-    <Compile Include="_Memcached\INodeFailurePolicy.cs" />
     <Compile Include="_Memcached\FailurePolicy\FailImmediatelyPolicy.cs" />
     <Compile Include="_Memcached\IMemcachedNode.cs" />
     <Compile Include="_Memcached\MemcachedNode\MemcachedNode.cs" />
-    <Compile Include="_Memcached\MemcachedNode\MemcachedNodeConnectionPool.cs" />
-    <Compile Include="_Memcached\ServerPool\TextServerPool.cs" />
+    <Compile Include="_Memcached\ServerPool\MemcachedServerPool.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

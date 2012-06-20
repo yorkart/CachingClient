@@ -11,7 +11,8 @@
 //-----------------------------------------------------------------------------------------
 
 using System;
-using Enyim.Caching._MemcachedNode;
+using Enyim.Caching._Memcached;
+using Enyim.Caching.Memcached;
 
 namespace Enyim.Caching.FailurePolicy {
 
@@ -20,19 +21,9 @@ namespace Enyim.Caching.FailurePolicy {
     /// 节点错误引发
     /// </summary>
     public sealed class FailImmediatelyPolicy : INodeFailurePolicy {
+        
         bool INodeFailurePolicy.ShouldFail() {
             return true;
-        }
-    }
-
-    /// <summary>
-    /// Creates instances of <see cref="T:FailImmediatelyPolicy"/>.
-    /// </summary>
-    public class FailImmediatelyPolicyFactory : INodeFailurePolicyFactory {
-        private static readonly INodeFailurePolicy PolicyInstance = new FailImmediatelyPolicy();
-
-        public INodeFailurePolicy Create(IMemcachedNode node) {
-            return PolicyInstance;
         }
     }
 }

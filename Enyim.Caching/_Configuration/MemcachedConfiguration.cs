@@ -8,25 +8,20 @@ namespace Enyim.Caching._Configuration {
         /// </summary>
         public IList<MemcachedNodeConfiguration> ServerList { get; set; }
 
-        //public ServerNodeConfiguration DefaultServer { get; set; }
+        /// <summary>
+        /// 服务器回传的身份验证key
+        /// </summary>
+        public string AuthenticationKey { get; set; }
 
         /// <summary>
         /// 协议
         /// "TEXT" / "BINARY"
         /// </summary>
-        public string Protocol {get;set;} 
+        public string Protocol { get; set; }
 
-        public Enyim.Caching._Memcached.IServerPool CreateServerPool() {
-            //switch (this.Protocol)
-            //{
-            //    case MemcachedProtocol.Text.ToString(): 
-            //        return new DefaultServerPool(this, new Memcached.Protocol.Text.TextOperationFactory());
-            //    case MemcachedProtocol.Binary.ToString(): 
-            //        return new BinaryPool(this);
-            //}
-
-            //throw new ArgumentOutOfRangeException("Unknown protocol: " + (int)this.Protocol);
-            return null;
-        }
+        /// <summary>
+        /// 虚拟节点基数
+        /// </summary>
+        public int VirtualNodeRadix { get; set; }
     }
 }

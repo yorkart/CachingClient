@@ -54,6 +54,7 @@ namespace Enyim.Caching._Memcached.Configuration {
             protected set;
         }
 
+        //public FailurePolicyFactory
 
         private class MemcachedConfigValidate {
 
