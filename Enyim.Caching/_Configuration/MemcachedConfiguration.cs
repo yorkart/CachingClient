@@ -3,6 +3,12 @@
 namespace Enyim.Caching._Configuration {
 
     public class MemcachedConfiguration {
+
+        /// <summary>
+        /// key前缀 统一加
+        /// </summary>
+        public string KeyPrefix { get; set; }
+
         /// <summary>
         /// 服务节点集合
         /// </summary>

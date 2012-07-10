@@ -265,7 +265,6 @@ namespace Enyim.Caching.Memcached {
 
                 // do we have free items?
                 if (this.freeItems.TryPop(out retval)) {
-                    #region [ get it from the pool         ]
 
                     try {
                         retval.Reset();
@@ -281,7 +280,6 @@ namespace Enyim.Caching.Memcached {
                         return null;
                     }
 
-                    #endregion
                 }
 
                 // free item pool is empty

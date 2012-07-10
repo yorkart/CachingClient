@@ -151,8 +151,7 @@ namespace Enyim.Caching.Memcached {
 
             return k;
         }
-
-        #region [ IDisposable                  ]
+                
 
         void IDisposable.Dispose() {
             using (this.serverAccessLock) {
@@ -173,6 +172,5 @@ namespace Enyim.Caching.Memcached {
             this.serverAccessLock = null;
         }
 
-        #endregion
     }
 }

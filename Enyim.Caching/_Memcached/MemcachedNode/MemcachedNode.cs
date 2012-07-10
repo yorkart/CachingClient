@@ -32,9 +32,16 @@ namespace Enyim.Caching._Memcached.MemcachedNode {
             this.internalPoolImpl = new InternalPoolImpl(this, nodeConfig);
         }
 
-        public event Action<IMemcachedNode> Failed;
-        private INodeFailurePolicy failurePolicy;
 
+        /// <summary>
+        /// 失败事件
+        /// </summary>
+        public event Action<IMemcachedNode> Failed;
+
+        /// <summary>
+        /// 失败策略
+        /// </summary>
+        private INodeFailurePolicy failurePolicy;
         protected INodeFailurePolicy FailurePolicy {
             get { return this.failurePolicy; }
         }
@@ -75,7 +82,7 @@ namespace Enyim.Caching._Memcached.MemcachedNode {
                     if (this.isDisposed) return false;
 
                     // try to connect to the server
-                    using (var socket = this.CreateSocket()) ;
+                    using (var socket = this.CreateSocket()) { }; // 尝试连接 如果失败此处会抛异常
 
                     if (this.internalPoolImpl.IsAlive)
                         return true;

@@ -187,7 +187,6 @@ namespace Enyim.Caching._Memcached.ServerPool {
             }
         }
 
-        #region [ IServerPool                  ]
         IMemcachedNode IServerPool.Locate(string key) {
             var node = this.nodeLocator.Locate(key);
 
@@ -224,8 +223,6 @@ namespace Enyim.Caching._Memcached.ServerPool {
             remove { this.nodeFailed -= value; }
         }
 
-        #endregion
-        #region [ IDisposable                  ]
 
         void IDisposable.Dispose() {
             GC.SuppressFinalize(this);
@@ -255,8 +252,5 @@ namespace Enyim.Caching._Memcached.ServerPool {
                 this.resurrectTimer = null;
             }
         }
-
-        #endregion
-
     }
 }
